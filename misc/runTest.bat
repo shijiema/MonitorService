@@ -1,0 +1,1 @@
+java -cp .;../bin/;../lib/junit.jar;../lib/org.hamcrest.core_1.3.0.v201303031735.jar org.junit.runner.JUnitCore test.ma.ServiceCheckerTest

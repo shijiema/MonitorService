@@ -1,0 +1,16 @@
+list service:
+
+subscribe:
+gWeb
+monitorService
+.end.
+
+set outage period:
+2015-05-13 13:01:01<->2015-05-13 15:00:00
+.end.
+
+set polling:
+20
+.end.
+
+shutdown:

@@ -1,0 +1,46 @@
+Besides unit tests and integration tests developed, this service
+can also be tested manualy by using telnet. if you do not have
+telnet installed, try alternative utility such as nc instead.
+
+On windows 7 and above, telnet is not installed by default. You
+can go to control panel to enable windows feature to get it installed.
+
+How to start the service
+
+Please go to misc folder and execute startMonitorService.bat
+
+How to test using telnet
+
+1.you can open two or more telnet sessions from different command line windows or from
+two computures. To connect to Monitor Service, start telnet as this:
+	telnet localhost 7777
+If connection is successful, the Monitor Service will send telnet a list of service you
+can subscribe. Sorry that I did not have enough time to give the clients a warm welcome :)
+
+2. Refer to the command samples listed in SampleCommands.txt and try to interact with Monitor Service.
+For example, if you want to subscribe a service called gWeb, and a service called GRWeb, you can issue 
+a command like this:
+		subscrine:
+		gWeb
+		GRWeb
+		.end.
+Note, there's not leading spaces when you enter them.
+		
+"subscribe:" is a command for client to subscribe services. "gWeb" is the name of service. You can
+specify more services to subscribe. Each service will occupy one line. You end the subscribe command
+by providing a terminater called ".end.".
+
+3. In second window, you can subscribe some services with some of them in common with the services
+subscribed by first client
+
+4. You can then adjust polling frequency by issuing polling period command in one or both clients and
+observe the change on update frequency. Time unit is second.
+
+	set polling:
+	20
+	.end.
+This means for the services subscribed, this subscriber wants to be notified every 20 seconds. Notification
+frequency is impacted by grace period and planned outage period too.
+
+5. to shutdown the service, do this:
+	shutdown:
