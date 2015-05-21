@@ -1,0 +1,2 @@
+# MonitorService
+A monitor service that simply tells if given TCP/IP based service is up or down. The first submission is a 13 hours work on a technical assignment from an interview. I started to love it after basic structure and simple commands had been realized so that I decided to put here for future perfection. I also use this chance to get familiar with git. It will be beneficial to the people who want to take a look at how a TCP server is working.
